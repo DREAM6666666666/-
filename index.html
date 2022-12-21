@@ -1,40 +1,90 @@
-<!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>恭喜，站点创建成功！</title>
-    <style>
+<meta charset="UTF-8">
+<title>弦宏SMG工作室 | 我的世界 Minecraft</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<style>
+	body{
+		background-image: url('./img/bg1.png');
+		background-repeat:no-repeat; 
+		background-size:100%;
+		background-attachment: fixed;
+	}
+	h6{
+	color:white;
+	font-size:30px;
+	}
+	p{
+	color:white;
+	font-size:18px;
+	}
+</style>
+<style>
+	.pos{
+	margin-top:15%;
+	margin-left:24%;
+	}
+	.pos1{
+	margin-top:2%
+	}
+	.fadenum{
+	animation:fadenum 2s 1;
+	}
+	@keyframes fadenum{
+	   0%{opacity: 0;}
+	   40%{opacity: 0;}
+	   100%{opacity: 1;}
+	}
+	.fadenum1{
+	animation:fadenum1 5s 1;
+	}
+	@keyframes fadenum1{
+	   0%{opacity: 0;}
+	   40%{opacity:0;}
+	   100%{opacity: 1;}
+	}
+	.float{
+	animation:float1 6s 1;
+	}
+	@keyframes float1{
+	   0%{opacity: 0;}
+	   50%{opacity:0;}
+	   100%{opacity: 1;}
+	}
+</style>
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+	border-radius: 12px;
+}
 
-        .container {
-            width: 60%;
-            margin: 10% auto 0;
-            background-color: #f0f0f0;
-            padding: 2% 5%;
-            border-radius: 10px
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-            ul li {
-                line-height: 2.3
-            }
-
-        a {
-            color: #20a53a
-        }
-    </style>
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>恭喜, 站点创建成功！</h1>
-        <h3>这是默认index.html，本页面由系统自动生成</h3>
-        <ul>
-            <li>本页面在FTP根目录下的index.html</li>
-            <li>您可以修改、删除或覆盖本页面</li>
-            <li>FTP相关信息，请到“面板系统后台 > FTP” 查看</li>
-        </ul>
-    </div>
+<div class="pos">
+<h6 class="fadenum">Minecraft@弦宏SMG工作室</h6>
+<p class="fadenum1">在这里输入你的描述</p>
+<br/>
+<br/>
+<a class="float" href="https://jq.qq.com/?_wv=1027&k=17wTlK5V" title="加入QQ群" target="_blank"><button class="button">了解更多</button></a>
+</div>
 </body>
 </html>
