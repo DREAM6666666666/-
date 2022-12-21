@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #b4d0ff;
+}
+
+a {
+    color: black;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    color: rgb(0, 140, 255);
+}
+
+/* 渐出动画 */
+/* 上方渐出 */
+.OutTop {
+    animation: OutTop 1s ease 0.3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes OutTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+}
+
+/* 下方渐出 */
+.OutBottom {
+    opacity: 0;
+    animation: OutBottom 1s ease 0.3s 1 forwards;
+}
+
+@keyframes OutBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+}
+
+/* 左侧渐出 */
+.OutLeft {
+    animation: OutLeft 1s ease 0.3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes OutLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+}
+
+/* 右侧渐出 */
+.OutRight {
+    animation: OutRight 1s ease 0.3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes OutRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+}
+
+/* 各区块 */
+
+.Box3 {
+    background: url(./favicon.ico) no-repeat center center;
+    margin-top: 25%;
+}
+
+.Box5 {
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da292f8418e.png) no-repeat center center;
+	margin-top: 28%;
+}
+
+.xhsmgBox {
+    width: 100%;
+    height: 1000px;
+}
+
+/* 锚点2 */
+#about {
+    position: relative;
+    top: 25%;
+}
+
+/* 一些话 */
+.Box3-talk {
+    width: 800px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    position: relative;
+    top: 280px;
+    left: 50%;
+    margin-left: -400px;
+    padding: 50px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    transition: all 0.3s;
+}
+
+.Box3-talk-text {
+    padding: 0 50px;
+}
+
+.Box3-talk h1 {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.Box3-talk h1::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: url(./favicon.ico) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    margin-right: 30px;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+
+.Box3-talk p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.Box3-talk-text-end {
+    text-align: center;
+}
+
+.Box3-talk:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+.Box3-More {
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    top: 310px;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    animation: OutBottom 1s ease 0.5s 1 forwards;
+}
+
+.Box3-More:hover {
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+/* 锚点4 */
+#join {
+    position: relative;
+    top: 28%;
+}
+
+/* 加入我们 */
+.Box5-Join {
+    width: 600px;
+    height: auto;
+    background: url(https://jyimg.tk/img/1/2022-12-21/63a2ebfb29509.png);
+    background-size: 100% 100%;
+    position: relative;
+    top: 300px;
+    left: 50%;
+    margin-left: -300px;
+    padding: 50px 0;
+}
+
+.Box5-Join-talk {
+    margin-left: 70px;
+}
+
+.Box5-Join-talk a {
+    text-decoration: underline;
+}
+
+.Box5-Join-talk h1, .Box5-Join-talk p {
+    margin-bottom: 20px;
+}
+
+.Box5-Join-talk h1::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(./favicon.ico);
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* 页脚 */
+.footer {
+    position: relative;
+    top: 100%;
+    margin-top: -410px;
+    width: 100%;
+    height: 100px;
+    background: url(https://jyimg.tk/img/1/2022-12-21/63a2ee362e6c6.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1070px) {
+    .Box3-talk h1 {
+        margin: 0;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .Box3-talk h1::before {
+        margin-right: 10px;
+    }
+
+    .Box3-talk p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .Box3-talk-text-end {
+        font-size: 1rem;
+    }
+
+    .Box3-More {
+        width: 150px;
+        top: 240px;
+        margin-left: -75px;
+    }
+
+    .Box5-Join {
+        width: 400px;
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+
+    .Box3-talk {
+        width: 300px;
+        top: 220px;
+        height: auto;
+        margin-left: -150px;
+        padding-top: 20px;
+		margin-top: 80%;
+    }
+
+    .Box3-talk-text {
+        padding: 0 10px;
+    }
+
+    .Box3-talk h1 {
+        margin: 0;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .Box3-talk h1::before {
+        margin-right: 10px;
+    }
+
+    .Box3-talk p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .Box3-talk-text-end {
+        font-size: 1rem;
+    }
+
+    .Box3-More {
+        width: 100px;
+        top: 240px;
+        margin-left: -50px;
+    }
+
+    .Box5-Join {
+        width: 300px;
+        margin-left: -150px;
+        padding: 70px 0;
+    }
+
+    .Box5-Join-talk {
+        margin-left: 30px;
+    }
+}
