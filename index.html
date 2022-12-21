@@ -2,7 +2,12 @@
 <head>
 <meta charset="UTF-8">
 <title>弦宏SMG工作室 | 我的世界 Minecraft</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+<link rel="bookmark"  type="image/x-icon"  href="./favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://www.psmc.tk/static/css/font.css">
+<link rel="stylesheet" type="text/css" href="https://www.psmc.tk/static/css/viewer.min.css">
+<link rel="shortcut icon" href="./favicon.ico">
+<link rel="stylesheet" type="text/css" href="https://www.psmc.tk/static/css/loader.css">
 <style>
 	body{
 		background-image: url('https://jyimg.tk/img/0/2022-12-21/63a2c0374bf32.png');
@@ -14,7 +19,7 @@
 	color:white;
 	font-size:30px;
 	}
-	p{
+	.desc{
 	color:white;
 	font-size:18px;
 	}
@@ -53,8 +58,7 @@
 	}
 </style>
 <style>
-.button {
-    background-color: #4CAF50; /* Green */
+.more-button {
     border: none;
     color: white;
     padding: 16px 32px;
@@ -72,18 +76,721 @@
 	border-radius: 12px;
 }
 
-.button:hover {
+.more-button:hover {
     background-color: #008CBA;
     color: white;
+}
+
+</style>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #b4d0ff;
+}
+
+a {
+    color: black;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    color: rgb(0, 140, 255);
+}
+
+/* 渐出动画 */
+/* 上方渐出 */
+.OutTop {
+    animation: OutTop 1s ease 0.3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes OutTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+        -moz-transform: translateY(-100px);
+        -ms-transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+}
+
+/* 下方渐出 */
+.OutBottom {
+    opacity: 0;
+    animation: OutBottom 1s ease 0.3s 1 forwards;
+}
+
+@keyframes OutBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+    }
+}
+
+/* 左侧渐出 */
+.OutLeft {
+    animation: OutLeft 1s ease 0.3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes OutLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+}
+
+/* 右侧渐出 */
+.OutRight {
+    animation: OutRight 1s ease 0.3s 1 forwards;
+    opacity: 0;
+}
+
+@keyframes OutRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+        -moz-transform: translateX(-100px);
+        -ms-transform: translateX(-100px);
+        -webkit-transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+    }
+}
+
+/* 各区块 */
+
+.Box1 {
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da2928cbced.png) no-repeat center center;
+}
+
+.Box2 {
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da293100dd0.png) no-repeat center center;
+    margin-top: -400px;
+}
+
+.Box3 {
+    background: url(./favicon.ico) no-repeat center center;
+    margin-top: 40%;
+}
+
+.Box4 {
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da292f71b1f.png) no-repeat center center;
+    margin-top: -10px;
+}
+
+.Box5 {
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da292f8418e.png) no-repeat center center;
+}
+
+.nutscraftBox {
+    width: 100%;
+    height: 1000px;
+}
+
+/* 首页标题 */
+
+.Box1-title {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url(https://cdn2.pandaimg.com/2022/07/22/62da29374f9b8.png);
+    width: 600px;
+    height: auto;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -300px;
+    padding: 50px 0;
+    animation: OutBottom 0.5s ease;
+    transition: all 0.3s;
+}
+
+.Box1-title:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transform: scale(1.02);
+}
+
+.Box1-title1 {
+    font-size: 3.5rem;
+    margin: 0 0 20px;
+    opacity: 0;
+    animation: OutBottom 1s ease 0.5s 1 forwards;
+}
+
+.Box1-title2 {
+    font-size: 1.8rem;
+    opacity: 0;
+    animation: OutBottom 1s ease 0.5s 1 forwards;
+}
+
+.Box1-title-Buttom {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 40px;
+    margin: 40px auto 0;
+    opacity: 0;
+    animation: OutBottom 1s ease 1s 1 forwards;
+}
+
+.Box1-title-Buttom:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+/* 锚点1 */
+#anchor1 {
+    position: relative;
+    top: 260px;
+}
+
+/* 特色介绍 */
+.Box2-nutscraft {
+    width: 1050px;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 400px;
+}
+
+.Box2-nutscraft ul {
+    display: inline-block;
+}
+
+.Box2-nutscraft ul li {
+    display: block;
+    float: left;
+    width: 240px;
+    height: 280px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 10px;
+    padding: 60px 0 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.Box2-nutscraft ul li img {
+    width: 80px;
+    transition: all 0.3s;
+}
+
+.Box2-nutscraft ul li h2 {
+    margin: 10px 0;
+}
+
+.Box2-nutscraft ul li p {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Box2-nutscraft ul li:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+.Box2-nutscraft ul li:hover img {
+    transform: scale(1.1);
+}
+
+.Box2-More {
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    margin: 30px auto 0;
+    opacity: 0;
+    animation: OutBottom 1s ease 0.5s 1 forwards;
+}
+
+.Box2-More:hover {
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+/* 锚点2 */
+#about {
+    position: relative;
+    top: 40%;
+}
+
+/* 一些话 */
+.Box3-talk {
+    width: 800px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    position: relative;
+    top: 280px;
+    left: 50%;
+    margin-left: -400px;
+    padding: 50px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    transition: all 0.3s;
+}
+
+.Box3-talk-text {
+    padding: 0 50px;
+}
+
+.Box3-talk h1 {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+
+.Box3-talk h1::before {
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: url(./favicon.ico) no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    margin-right: 30px;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+
+.Box3-talk p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.Box3-talk-text-end {
+    text-align: center;
+}
+
+.Box3-talk:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+.Box3-More {
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    top: 310px;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    animation: OutBottom 1s ease 0.5s 1 forwards;
+}
+
+.Box3-More:hover {
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+/* 锚点3 */
+#anchor3 {
+    position: relative;
+    top: 230px;
+}
+
+/* 风景展示 */
+.Box4-Title {
+    display: block;
+    position: relative;
+    top: 290px;
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.Box4 ul {
+    width: 940px;
+    position: relative;
+    top: 240px;
+    left: 50%;
+    margin-left: -470px;
+    margin-top: 80px;
+}
+
+.Box4 ul li {
+    display: inline-block;
+}
+
+.Box4 ul li img {
+    width: 260px;
+    border: 5px solid white;
+    margin: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.Box4 ul li img:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    transform: scale(1.02);
+}
+
+.Box4-More {
+    display: block;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    top: 260px;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    animation: OutBottom 1s ease 0.5s 1 forwards;
+}
+
+.Box4-More:hover {
+    color: black;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: white;
+}
+
+/* 锚点4 */
+#anchor4 {
+    position: relative;
+    top: 100px;
+}
+
+/* 加入我们 */
+.Box5-Join {
+    width: 600px;
+    height: auto;
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da293565e1e.png);
+    background-size: 100% 100%;
+    position: relative;
+    top: 300px;
+    left: 50%;
+    margin-left: -300px;
+    padding: 50px 0;
+}
+
+.Box5-Join-talk {
+    margin-left: 70px;
+}
+
+.Box5-Join-talk a {
+    text-decoration: underline;
+}
+
+.Box5-Join-talk h1, .Box5-Join-talk p {
+    margin-bottom: 20px;
+}
+
+.Box5-Join-talk h1::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(https://cdn2.pandaimg.com/2022/07/22/62da293292a25.png);
+    background-size: 100% 100%;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* 页脚 */
+.footer {
+    position: relative;
+    top: 100%;
+    margin-top: -410px;
+    width: 100%;
+    height: 100px;
+    background: url(https://cdn2.pandaimg.com/2022/07/22/62da2933782d6.png) no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 1070px) {
+    .Box1-title {
+        width: 400px;
+        margin-left: -200px;
+        top: 150px;
+    }
+
+    .Box2-nutscraft {
+        width: 500px;
+        padding-top: 300px;
+    }
+
+    .Box2-nutscraft ul li {
+        width: 230px;
+        height: 200px;
+        padding: 20px 0 30px;
+    }
+
+    .Box2-nutscraft ul li img {
+        width: 40px;
+    }
+
+    .Box2-More {
+        width: 150px;
+    }
+
+    .Box3-talk {
+        width: 400px;
+        top: 220px;
+        height: auto;
+        margin-left: -200px;
+        padding-top: 10px 0 0;
+    }
+
+    .Box3-talk h1 {
+        margin: 0;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+
+    .Box3-talk h1::before {
+        margin-right: 10px;
+    }
+
+    .Box3-talk p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .Box3-talk-text-end {
+        font-size: 1rem;
+    }
+
+    .Box3-More {
+        width: 150px;
+        top: 240px;
+        margin-left: -75px;
+    }
+
+    .Box4-Title {
+        top: 230px;
+    }
+
+    .Box4 ul {
+        width: 500px;
+        top: 170px;
+        margin-left: -250px;
+    }
+
+    .Box4 ul li img {
+        width: 190px;
+    }
+
+    .Box4-More {
+        top: 170px;
+        width: 150px;
+        margin-left: -75px;
+    }
+
+    .Box5-Join {
+        width: 400px;
+        margin-left: -200px;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .Box1-title {
+        width: 300px;
+        margin-left: -150px;
+    }
+
+    .Box1-title1 {
+        font-size: 2.5rem;
+    }
+
+    .Box1-title2 {
+        font-size: 1.5rem;
+    }
+
+    .Box2-nutscraft {
+        width: 80%;
+        padding-top: 300px;
+    }
+
+    .Box2-nutscraft ul li {
+        width: 100%;
+        height: auto;
+        padding: 10px 0;
+        margin: 5px;
+    }
+
+    .Box2-nutscraft ul li h2 {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .Box2-nutscraft ul li img {
+        width: 30px;
+    }
+
+    .Box2-More {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    .Box3-talk {
+        width: 300px;
+        top: 220px;
+        height: auto;
+        margin-left: -150px;
+        padding-top: 20px;
+		margin-top: 80%;
+    }
+
+    .Box3-talk-text {
+        padding: 0 10px;
+    }
+
+    .Box3-talk h1 {
+        margin: 0;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .Box3-talk h1::before {
+        margin-right: 10px;
+    }
+
+    .Box3-talk p {
+        font-size: 1rem;
+        margin: 20px 0;
+    }
+
+    .Box3-talk-text-end {
+        font-size: 1rem;
+    }
+
+    .Box3-More {
+        width: 100px;
+        top: 240px;
+        margin-left: -50px;
+    }
+
+    .Box4-Title {
+        top: 230px;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .Box4 ul {
+        width: 300px;
+        top: 200px;
+        margin-left: -150px;
+    }
+
+    .Box4 ul li img {
+        width: 130px;
+        border: 2px solid white;
+        margin: 5px;
+    }
+
+    .Box4-More {
+        top: 240px;
+        width: 150px;
+        margin-left: -75px;
+    }
+
+    .Box5-Join {
+        width: 300px;
+        margin-left: -150px;
+        padding: 70px 0;
+    }
+
+    .Box5-Join-talk {
+        margin-left: 30px;
+    }
 }
 </style>
 </head>
 <body>
 <div class="pos">
 <h6 class="fadenum">Minecraft @ 弦宏SMG工作室</h6>
-<p class="fadenum">A communication studio where you can communicate, have fun, and connect together!</p>
 <br/>
-<a class="fadenum1" href="https://jq.qq.com/?_wv=1027&k=17wTlK5V" title="继续下滑"><button class="button">了解更多</button></a>
+<p class="desc fadenum">A communication studio where you can communicate, have fun, and connect together!</p>
+<br/>
+<a class="fadenum1" href="#about" scrollto="about" title="继续下滑"><button class="more-button scrollOnClick wow"  easing="smooth">了解更多</button></a>
 </div>
+
+    <!-- 一些话 -->
+    <div class="nutscraftBox Box3">
+        <div id="about"></div>
+        <div class="Box3-talk OutBottom wow">
+            <div class="Box3-talk-text">
+                <h1>关于我们</h1>
+                <p>弦宏SMG工作室，是以Minecrft(我的世界)为基础而创建的工作室，</p>
+				<p>我们精益求精，以细节为本，创建一个新的玩法！</p>
+				<p>我们常以战争，枪械，PVP为题材，进行创作。</p>
+				<p>并不是喜欢战争，只是想让玩家在激烈的战斗中，领悟到战争的残酷，而达到促进和平。</p>
+            </div>
+        </div>
+        <a href="#anchor3" target="_blank" class="scrollOnClick Box3-More wow">赞助我们</a>
+    </div>
 </body>
 </html>
