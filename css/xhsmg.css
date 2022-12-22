@@ -121,7 +121,7 @@ a:hover {
 /* 各区块 */
 
 .Box3 {
-    background: url(./favicon.ico) no-repeat center center;
+    background: url(/favicon.ico) no-repeat center center;
     margin-top: 25%;
 }
 
@@ -170,7 +170,7 @@ a:hover {
     display: inline-block;
     width: 60px;
     height: 60px;
-    background: url(./favicon.ico) no-repeat;
+    background: url(/favicon.ico) no-repeat;
     background-size: 100% 100%;
     border-radius: 50%;
     margin-right: 30px;
@@ -251,7 +251,7 @@ a:hover {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-image: url(./favicon.ico);
+    background-image: url(/favicon.ico);
     background-size: 100% 100%;
     vertical-align: middle;
     margin-right: 10px;
